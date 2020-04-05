@@ -32,7 +32,8 @@
                     </transition-group>
                     
                 </b-row>
-            <Tabla :lista="tablaCuentas" />        
+            <!--Tabla con datos-->
+            <Tabla :lista="tablaCuentas" @quitarCuenta="quitarCuenta" v-if="tablaCuentas.length"/>        
             <b-form-group id="input-group-4">
                 <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
                 <b-form-checkbox value="me">Check me out</b-form-checkbox>
@@ -75,12 +76,23 @@ data() {
       }
     },
     methods: {
+        quitarCuenta(item){
+            this.tablaCuentas = this.tablaCuentas.filter( x => {return x.cuenta.id !== item.cuenta.id })
+            this.$emit('reestablecerOption',item.cuenta.id)
+        },
         agregarCuenta(){
             this.tablaCuentas.push({
                 cuenta: this.form.cuenta, 
                 monto: this.form.monto, 
                 tipo: this.form.tipo, 
             });
+            this.tablaCuentas.sort(x => {
+                if( x.tipo == 'Haber')
+                    return 1
+                return -1
+            })
+            let id = this.form.cuenta.id
+            this.$emit("quitarOption", id)
             this.form.cuenta = null;
             this.form.monto = 0;
             this.form.tipo = 'Debe';

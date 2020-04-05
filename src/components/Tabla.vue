@@ -1,20 +1,43 @@
 <template>
     <div>
-        <b-table striped hover :items="lista" :fields="fields">
+        <b-table striped hover :items="lista" :fields="fields" foot-clone fixed responsive>
             <template v-slot:table-colgroup="scope">
             <col
                 v-for="field in scope.fields"
                 :key="field.key"
-                :style="{ width: field.key === 'foo' ? '120px' : '180px' }"
+                :style="{ width: field.key === 'cuenta' ? '200px' : '180px' }"
             >
             </template>
             <template v-slot:cell(actions)="row">
-                <b-button size="sm" @click="quitar(row.item, row.index, $event.target)" class="mr-1">
+                <b-button size="sm" @click="quitar(row.item)" class="mr-1">
                     <b-icon-trash-fill></b-icon-trash-fill>
                 </b-button>
             </template>
+            <template v-slot:cell(cuenta)="row">
+                <span class="float-left">{{row.value}} </span>
+            </template>
+             <!-- A custom formatted header cell for field 'name' -->
+            <template v-slot:head(cuenta)="data">
+                <span class="text-secondary">{{ data.label.toUpperCase() }}</span>
+            </template>
+
+            <!-- A custom formatted footer cell for field 'name' -->
+            <template v-slot:foot(cuenta)="">
+                <span class="text-secondary">Total</span>
+            </template>
+            
+            <template v-slot:foot(debe)="">
+                <span class="text-secondary mt-5">{{sumarDebe}}</span>
+            </template>
+            <template v-slot:foot(haber)="">
+                <span class="text-secondary mt-5">{{sumarHaber}}</span>
+            </template>
+
+            <!-- Default fall-back custom formatted footer cell -->
+            <template v-slot:foot()="data">
+                <i>{{ data.label }}</i>
+            </template>
         </b-table>
-        
         <b-modal >
             
         </b-modal>
@@ -45,33 +68,25 @@
                     }
                 },
                 { key: 'actions', label: '' }
-            ],
-            items: [
-                { age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
-                { age: 21, first_name: 'Larsen', last_name: 'Shaw' },
-                { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
-                { age: 38, first_name: 'Jami', last_name: 'Carney' }
             ]
         }
     },
     methods: {
-        quitar(item, index, button) {
-             let asd = {
-                 item,index,button
-             }
-             alert("asd: ",asd.index)
+        quitar(item) {
+            console.log("emit-ing from child");
+            this.$emit('quitarCuenta',item)
         },
     },
     computed: {
-        listaOptimizada: function() {
-            return this.lista.map(function(x) {         
-                return {
-                    cuenta: x.cuenta.text,
-                    debe: this.distribuirDebe(x) ,
-                    haber: this.distribuirHaber(x) ,
-                    monto: x.monto
-                }
-            });
+        sumarDebe(){
+            let sumaD = 0;
+            this.lista.map(x => { if(x.tipo == 'Debe' ) {sumaD += parseInt(x.monto)}})
+            return sumaD
+        },
+        sumarHaber(){
+            let sumaD = 0;
+            this.lista.map(x => { if(x.tipo == 'Haber' ) {sumaD += parseInt(x.monto)}})
+            return sumaD
         }
     },
     components: {
