@@ -6,6 +6,7 @@
                     <b-col md="1">
                         <b-button 
                             size="md"
+                            ref="tipo"
                             :variant="debehaber"
                             @click="changeType">{{form.tipo}}</b-button>
                     </b-col>
@@ -27,29 +28,14 @@
                         </b-input-group>
                         </b-col>
                         <b-col md="1" v-if="form.tipo!='Tipo'" v-bind:key="'zxc'" class="float-left">
-                            <b-button variant="success" @click="agregarCuenta">+</b-button>
+                            <b-button variant="info" @click="agregarCuenta">+</b-button>
                         </b-col>
                     </transition-group>
                     
                 </b-row>
             <!--Tabla con datos-->
-            <Tabla :lista="tablaCuentas" @quitarCuenta="quitarCuenta" v-if="tablaCuentas.length"/>        
-            <b-form-group id="input-group-4">
-                <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
-                <b-form-checkbox value="me">Check me out</b-form-checkbox>
-                <b-form-checkbox value="that">Check that out</b-form-checkbox>
-                </b-form-checkbox-group>
-            </b-form-group>
-
-            <b-button type="submit" variant="primary">Submit</b-button>
-            <b-button type="reset" variant="danger">Reset</b-button>
+            <Tabla :lista="tablaCuentas" @quitarCuenta="quitarCuenta" v-if="tablaCuentas.length"/>
             </b-form>
-            <b-card class="mt-3" header="Form Data Result">
-            <pre class="m-0">{{ form }}</pre>
-            <pre class="m-0">{{ tablaCuentas }}</pre>
-            </b-card>
-                
-            
         </b-container>
     </div>
 </template>
@@ -96,6 +82,7 @@ data() {
             this.form.cuenta = null;
             this.form.monto = 0;
             this.form.tipo = 'Debe';
+            this.$refs.tipo.focus();
         },
       onSubmit(evt) {
         evt.preventDefault()
@@ -165,8 +152,10 @@ data() {
 <style scoped lang="scss">
     .rowCuenta-enter{
         opacity: 0;
+        transform: translateX(100px);
     }
     .rowCuenta-enter-to{
+        transform: translateX(0px);
         opacity: 1;
     }
     .rowCuenta-enter-active{

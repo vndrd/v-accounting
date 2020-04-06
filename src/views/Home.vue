@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/images/libro.png" width="200px">
+    <img alt="Vue logo" src="../assets/images/libro.png" width="200px" class="mb-5">
     <Asiento :cuentas="cuentas" @quitarOption="quitarOption" @reestablecerOption="reestablecerOption"/>
   </div>
 </template>
