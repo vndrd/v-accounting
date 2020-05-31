@@ -22,16 +22,26 @@ const state = {
         {id: 20,text: 'PROPAGANDA Y PUBLICIDAD', tipo: 'Egreso'},
         {id: 21,text: 'IMPUESTO A LAS TRANSACCIONES', tipo: 'Egreso'},
         {id: 22, text: 'Capital Contable', tipo: 'Patrimonio'}
-    ]
+    ],
+    asientos: []
 }
 const getters = {
-    getCuentas: (state) => state.cuentas
+    getCuentas: (state) => state.cuentas,
+    getAsientos: (state) => state.asientos,
 }
 const actions = {
-
+    agregarAsiento: function({commit},form) {
+        //logica para agregar
+        let asiento = {
+            nombre: form.cuenta.text,
+            id: form.cuenta.id,
+            ...form
+        }
+        commit('setAsiento',asiento)
+    }
 }
 const mutations = {
-
+    setAsiento: (state,asiento) => state.asientos = [...state.asientos,asiento]
 }
 export default {
     state,

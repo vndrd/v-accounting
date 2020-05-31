@@ -19,7 +19,7 @@
                 <b-form-radio value="Haber" button-variant="outline-secondary">
                     Haber</b-form-radio>
             </b-form-radio-group>
-            <b-button class="float-right" variant="info" size="md" @click="enviarCuenta">
+            <b-button class="float-right" variant="info" size="md" @click="enviarAsiento">
             Agregar</b-button>
         </b-form-group>
     </b-form>
@@ -27,7 +27,7 @@
 
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters,mapActions } from 'vuex'
 import Select from '@/components/Select'
 export default {
     name: 'Formulario',
@@ -47,14 +47,15 @@ export default {
         ...mapGetters(['getCuentas']),
     },
     methods:{
+        ...mapActions(['agregarAsiento']),
         agregarCuenta(){
             console.log("qwe")
         },
         cambiarSelect(){
             console.log({select: this.form.cuenta})
         },
-        enviarCuenta(){
-            console.log("enviarCuenta")
+        enviarAsiento(){
+            console.log("enviarAsiento")
             if( this.form.cuenta===null ){
                 alert("escoger cuenta")
                 return
@@ -67,9 +68,9 @@ export default {
                 alert("escoger tipo")
                 return
             }
+            this.agregarAsiento(this.form)
         }
-    },
-    
+    },    
 }
 </script>
 <style lang="scss" scoped>

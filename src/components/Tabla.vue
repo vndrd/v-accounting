@@ -1,6 +1,6 @@
 <template>
 <div>
-    <b-table striped hover :items="lista" :fields="fields" foot-clone fixed responsive key="zzz"       :small="true">
+    <b-table striped hover :items="getAsientos" :fields="fields" foot-clone fixed responsive key="zzz"       :small="true">
         <template v-slot:table-colgroup="scope">
             <col
                 v-for="field in scope.fields"
@@ -48,10 +48,9 @@
 </template>
 
 <script>
-
-  export default {
+import { mapGetters } from 'vuex'
+export default {
     name: 'Tabla',
-    props: ['lista'],
     data() {
         return {
             fields: [
@@ -75,21 +74,25 @@
         }
     },
     methods: {
+        ...mapGetters(['getAsientos']),
         quitar(item) {
             console.log("emit-ing from child");
             this.$emit('quitarCuenta',item)
         },
     },
     computed: {
+        ...mapGetters(['getAsientos']) ,
         sumarDebe(){
-            let sumaD = 0;
-            this.lista.map(x => { if(x.tipo == 'Debe' ) {sumaD += parseInt(x.monto)}})
-            return sumaD
+            // let sumaD = 0;
+            // this.lista.map(x => { if(x.tipo == 'Debe' ) {sumaD += parseInt(x.monto)}})
+            // return sumaD
+            return 0;
         },
         sumarHaber(){
-            let sumaD = 0;
-            this.lista.map(x => { if(x.tipo == 'Haber' ) {sumaD += parseInt(x.monto)}})
-            return sumaD
+            // let sumaD = 0;
+            // this.lista.map(x => { if(x.tipo == 'Haber' ) {sumaD += parseInt(x.monto)}})
+            // return sumaD
+            return 0;
         }
     },
     components: {

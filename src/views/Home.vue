@@ -5,6 +5,9 @@
         <b-col md="4" class="form-container m-4 p-4">
           <formulario />    
         </b-col>
+        <b-col md="6">
+          <Tabla />
+        </b-col>
       </b-row>
       <!-- <formulario /> -->
     <!-- </div> -->
@@ -15,6 +18,7 @@
 // @ is an alias to /src
 // import Asiento from '@/components/Asiento.vue'
 import Formulario from '@/components/Formulario.vue'
+import Tabla from '@/components/Tabla.vue'
 export default {
   name: 'Home',
   data: function(){
@@ -49,6 +53,7 @@ export default {
   components: {
     // Asiento,
     Formulario,
+    Tabla,
   }
 }
 </script>
