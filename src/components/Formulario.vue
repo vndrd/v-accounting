@@ -1,6 +1,6 @@
 <template>
 <b-container>
-    <b-form @submit="onSubmit">
+    <b-form>
         <b-form-group>
             <Select :form="form" />
         </b-form-group>
@@ -19,7 +19,7 @@
                 <b-form-radio value="Haber" button-variant="outline-secondary">
                     Haber</b-form-radio>
             </b-form-radio-group>
-            <b-button class="float-right" variant="info" size="md" @click="agregarCuenta">
+            <b-button class="float-right" variant="info" size="md" @click="enviarCuenta">
             Agregar</b-button>
         </b-form-group>
     </b-form>
@@ -34,7 +34,9 @@ export default {
     data(){
         return {
             form:{ 
-                cuenta: null
+                cuenta: null,
+                monto: 0,
+                tipo: 'Tipo',
             }
         }
     },
@@ -45,13 +47,29 @@ export default {
         ...mapGetters(['getCuentas']),
     },
     methods:{
-        onSubmit(){
+        agregarCuenta(){
             console.log("qwe")
         },
         cambiarSelect(){
             console.log({select: this.form.cuenta})
+        },
+        enviarCuenta(){
+            console.log("enviarCuenta")
+            if( this.form.cuenta===null ){
+                alert("escoger cuenta")
+                return
+            }
+            if( this.form.monto <= 0 ){
+                alert("asignar monto")
+                return
+            }
+            if( this.form.tipo === 'Tipo' ){
+                alert("escoger tipo")
+                return
+            }
         }
     },
+    
 }
 </script>
 <style lang="scss" scoped>
