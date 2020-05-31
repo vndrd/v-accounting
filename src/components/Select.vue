@@ -1,13 +1,13 @@
 <template>
-<b-form-group>
+
     <b-form-select
-        size="sm"
+        size="lg"
         :options="cuentasSelect"
         v-model="form.cuenta"
         @change="cambiarSelect"
         required
     ></b-form-select>
-</b-form-group>
+
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -51,5 +51,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+.btn-group {
+    float: left !important;
+}
+.custom-select{
+    font-size: 1rem ;
+}
 </style>
