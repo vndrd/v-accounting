@@ -8,6 +8,7 @@
                     <b-form-select
                     v-model="form.cuenta"
                     :options="cuentasSelect"
+                    @change="cambiarSelect"
                     required
                     ></b-form-select>
                 </b-form-group>
@@ -31,7 +32,27 @@ export default {
     computed: {
         ...mapGetters(['getCuentas']),
         cuentasSelect: function(){
-            return this.getCuentas
+            let tipos = ['Activo','Pasivo','Egreso','Patrimonio'],
+            cuentas = tipos.reduce( (arr,tipo) => {
+                let options  = this.getCuentas
+                    .filter( cuenta => 
+                        cuenta.tipo === tipo
+                    ).map( cuenta => {
+                        return {
+                            value: cuenta,
+                            text:   cuenta.text,
+                            disabled:false
+                        }
+                    })
+                let grupo = {
+                    label: tipo,
+                    options
+                }
+                arr.push(grupo)
+                return arr
+            },[] )
+            cuentas.push({value: null, text: 'Seleccionar Cuenta' })
+            return cuentas
         }
     },
     mounted: function(){
@@ -40,6 +61,9 @@ export default {
     methods:{
         onSubmit(){
             console.log("qwe")
+        },
+        cambiarSelect(){
+            console.log({select: this.form.cuenta})
         }
     },
 }
