@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <!-- <div class="form-container"> -->
+  <b-container fluid>
       <b-row>
-        <b-col md="4" class="form-container m-4 p-4">
-          <formulario />    
+        <b-col md="4">
+          <b-card
+              header="Asientos"
+              header-text-variant="white"
+              header-tag="header"
+          header-bg-variant="secondary">
+            <formulario/>    
+          </b-card>
         </b-col>
-        <b-col md="6">
-          <Tabla />
+        <b-col md="7" class="tabla-container">
+          <b-card
+              header="Asientos"
+              header-text-variant="white"
+              header-tag="header"
+          header-bg-variant="dark">
+            <b-card-body>
+              <Tabla />
+            </b-card-body>
+          </b-card>
         </b-col>
       </b-row>
-      <!-- <formulario /> -->
-    <!-- </div> -->
-    <!-- <Asiento :cuentas="cuentas" @quitarOption="quitarOption" @reestablecerOption="reestablecerOption"/> -->
-  </div>
+  </b-container>
+
 </template>
 <script>
 // @ is an alias to /src
@@ -65,8 +76,7 @@ export default {
 .home{
   position:relative;
 }
-.form-container{
-  border-radius: 10px;
-  border: solid 2px #f3f3f3;  
+.tabla-container{ 
+  min-height: 50vh !important;
 }
 </style>

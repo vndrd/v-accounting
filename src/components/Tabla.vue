@@ -1,6 +1,5 @@
 <template>
-<div>
-    <b-table striped hover :items="getAsientos" :fields="fields" foot-clone fixed responsive key="zzz"       :small="true">
+    <b-table striped hover :items="getAsientos" :fields="fields" foot-clone fixed responsive>
         <template v-slot:table-colgroup="scope">
             <col
                 v-for="field in scope.fields"
@@ -44,7 +43,6 @@
             <i>{{ data.label }}</i>
         </template>
     </b-table>                
-</div>
 </template>
 
 <script>
@@ -102,7 +100,10 @@ export default {
 </script>
 
 <style lang="scss">
-    .tablita-move{
-        transition: transform 1s;
-    }
+.tablita-move{
+    transition: transform 1s;
+}
+.table.b-table.b-table-fixed {
+    table-layout: auto !important;
+}
 </style>

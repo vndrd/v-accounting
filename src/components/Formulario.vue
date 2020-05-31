@@ -1,5 +1,4 @@
 <template>
-<b-container>
     <b-form>
         <b-form-group>
             <Select :form="form" />
@@ -23,7 +22,6 @@
             Agregar</b-button>
         </b-form-group>
     </b-form>
-</b-container>
 
 </template>
 <script>
@@ -74,5 +72,19 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+h3{
+    background: #333;
+    // background: #aa2222;
+    border: 5px white solid;
+    border-radius: 10px;
+    position: absolute;
+    transform: translateY(-50px) ;
+    padding:10px;
+    margin:0;
+    color:white;
+}
+.header-container{
+    height: 20px;
+    width: 100%;
+}
 </style>

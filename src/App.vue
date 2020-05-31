@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Doble partida </router-link>
+      <!-- <router-link to="/">Doble partida </router-link> -->
     </div>
     <router-view/>
   </div>
