@@ -1,22 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/images/libro.png" width="200px" class="mb-5">
-    <Asiento :cuentas="cuentas" @quitarOption="quitarOption" @reestablecerOption="reestablecerOption"/>
+    <formulario />
+    <!-- <Asiento :cuentas="cuentas" @quitarOption="quitarOption" @reestablecerOption="reestablecerOption"/> -->
   </div>
 </template>
-
 <script>
 // @ is an alias to /src
-import Asiento from '@/components/Asiento.vue'
-
+// import Asiento from '@/components/Asiento.vue'
+import Formulario from '@/components/Formulario.vue'
 export default {
   name: 'Home',
   data: function(){
     return {
       activos: [],
       cuentas: 
-        [
-          
+        [          
           {value: null, text: 'Seleccionar Cuenta' },
           {
             label: 'Activo',
@@ -89,7 +87,8 @@ export default {
     },
   },
   components: {
-    Asiento
+    // Asiento,
+    Formulario,
   }
 }
 </script>

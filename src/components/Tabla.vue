@@ -1,58 +1,50 @@
 <template>
-    <div>
-     
-                
-            <b-table striped hover :items="lista" :fields="fields" foot-clone fixed responsive key="zzz">
-                <template v-slot:table-colgroup="scope">
-                        <col
-                            v-for="field in scope.fields"
-                            :key="field.key"
-                            :style="{ width: field.key === 'cuenta' ? '200px' : '180px' }"
-                        >
-                </template>
-                <template v-slot:cell(actions)="row">
-                    <b-button size="sm" @click="quitar(row.item)" class="mr-1">
-                        <b-icon-trash-fill></b-icon-trash-fill>
-                    </b-button>
-                </template>
-                <template v-slot:cell(cuenta)="row">
-                    <span class="float-left">{{row.value}} </span>
-                </template>
-                <!-- A custom formatted header cell for field 'name' -->
-                    
-                        <template v-slot:head(cuenta)="data">
-                                <span class="text-secondary">{{ data.label.toUpperCase() }}</span>
-                        </template>
-                    
-
-                <!-- A custom formatted footer cell for field 'name' -->
-                <template v-slot:foot(cuenta)="">
-                    <span class="text-secondary">Total</span>
-                </template>
-                
-                <template v-slot:foot(debe)="">
-                    <span class="text-secondary mt-5">{{sumarDebe}}</span>
-                </template>
-                <template v-slot:foot(haber)="">
-                    <span class="text-secondary mt-5">{{sumarHaber}}</span>
-                </template>
-                <template v-slot:foot(actions)="">
-
-                    <b-button v-if="sumarDebe==sumarHaber"
-                        size="md"
-                        variant="success"
-                    >
-                        Registrar
-                    </b-button>
-                </template>
-
-                <!-- Default fall-back custom formatted footer cell -->
-                <template v-slot:foot()="data">
-                    <i>{{ data.label }}</i>
-                </template>
-            </b-table>
-                
-    </div>
+<div>
+    <b-table striped hover :items="lista" :fields="fields" foot-clone fixed responsive key="zzz"       :small="true">
+        <template v-slot:table-colgroup="scope">
+            <col
+                v-for="field in scope.fields"
+                :key="field.key"
+                :style="{ width: field.key === 'cuenta' ? '200px' : '180px' }"
+            >
+        </template>
+        <template v-slot:cell(actions)="row">
+            <b-button size="sm" @click="quitar(row.item)" class="mr-1">
+                <b-icon-trash-fill></b-icon-trash-fill>
+            </b-button>
+        </template>
+        <template v-slot:cell(cuenta)="row">
+            <span class="float-left">{{row.value}} </span>
+        </template>
+        <!-- A custom formatted header cell for field 'name' -->
+        <template v-slot:head(cuenta)="data">
+            <span class="text-secondary">{{ data.label.toUpperCase() }}</span>
+        </template>
+        <!-- A custom formatted footer cell for field 'name' -->
+        <template v-slot:foot(cuenta)="">
+            <span class="text-secondary">Total</span>
+        </template>
+        
+        <template v-slot:foot(debe)="">
+            <span class="text-secondary mt-5">{{sumarDebe}}</span>
+        </template>
+        <template v-slot:foot(haber)="">
+            <span class="text-secondary mt-5">{{sumarHaber}}</span>
+        </template>
+        <template v-slot:foot(actions)="">
+            <b-button v-if="sumarDebe==sumarHaber"
+                size="md"
+                variant="success"
+            >
+                Registrar
+            </b-button>
+        </template>
+        <!-- Default fall-back custom formatted footer cell -->
+        <template v-slot:foot()="data">
+            <i>{{ data.label }}</i>
+        </template>
+    </b-table>                
+</div>
 </template>
 
 <script>
