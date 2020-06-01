@@ -12,12 +12,12 @@
         </b-col>
         <b-col md="7" class="tabla-container">
           <b-card
-              header="Asientos"
+              header="Tabla de Asientos"
               header-text-variant="white"
               header-tag="header"
           header-bg-variant="dark">
             <b-card-body>
-              <Tabla />
+              <SimpleTable />
             </b-card-body>
           </b-card>
         </b-col>
@@ -29,7 +29,7 @@
 // @ is an alias to /src
 // import Asiento from '@/components/Asiento.vue'
 import Formulario from '@/components/Formulario.vue'
-import Tabla from '@/components/Tabla.vue'
+import SimpleTable from '@/components/SimpleTable.vue'
 export default {
   name: 'Home',
   data: function(){
@@ -64,7 +64,7 @@ export default {
   components: {
     // Asiento,
     Formulario,
-    Tabla,
+    SimpleTable,
   }
 }
 </script>
