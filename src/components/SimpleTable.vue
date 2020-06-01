@@ -1,8 +1,9 @@
 <template>
-<b-table-simple responsive striped hover>
-  <b-thead class="text-secondary">
+<div>
+<b-table-simple responsive hover>
+  <b-thead class="text-light bg-secondary">
     <b-tr>
-      <b-th style="width: 15rem">CUENTA</b-th>
+      <b-th style="width: 20rem">CUENTA</b-th>
       <b-th style="width: 10rem">DEBE</b-th>
       <b-th style="width: 10rem">HABER</b-th>
       <b-th style="width: 1rem"></b-th>
@@ -15,15 +16,11 @@
         </b-tr>
         <b-tr v-else v-for="cuenta in asientosMasTemporal" :key="cuenta.id">
             <b-td>{{cuenta.nombre}}</b-td>
-            <b-td>
-                
-                    {{valueOrZero(cuenta,'Debe')}}
-                
+            <b-td class="text-right">
+                {{valueOrBlankSpace(cuenta,'Debe')}}
             </b-td>
-            <b-td>
-                
-                    {{valueOrZero(cuenta,'Haber')}}
-                
+            <b-td class="text-right">
+                {{valueOrBlankSpace(cuenta,'Haber')}}
             </b-td>
             <b-td style="width: 1rem">
                     <b-button size="sm" 
@@ -41,21 +38,28 @@
         <b-td>
             <span class="float-right bold">{{getAsientos.length>0? 'Total: ': ''}}</span>
         </b-td>
-        <b-td>
+        <b-td class="text-right">
             {{getAsientos.length>0? `${sumarDebe}.-`: ''}}
         </b-td>
-        <b-td>
+        <b-td class="text-right">
             {{getAsientos.length>0? `${sumarHaber}.-`: ''}}
         </b-td>
         <b-td>
-            <b-button variant="success" 
-                :disabled="sumarHaber!==sumarDebe||getAsientos.length==0">  
-                Registrar
-            </b-button>
         </b-td>
     </b-tr>
   </b-tfoot>
 </b-table-simple>
+    <b-form-datepicker class="mb-3 mt-5"
+        @change="cambiandoFecha"
+        :disabled="getAsientos.length==0"
+        v-model="formu.fecha">
+    </b-form-datepicker>
+    <b-button variant="success" 
+        class="float-right"
+        :disabled="sumarHaber!==sumarDebe||getAsientos.length==0">  
+        Registrar
+    </b-button>
+</div>
 </template>
 
 <script>
@@ -65,12 +69,14 @@ export default {
     props: ['form'],
     data() {
         return {
-            
+            formu: {
+                fecha: new Date()
+            }    
         }
     },
     methods: {
         ...mapActions(['quitarAsiento']),
-        valueOrZero(cuenta,tipo){
+        valueOrBlankSpace(cuenta,tipo){
             if ( cuenta.tipo === tipo  ) 
                 return `${cuenta.monto}.-`
             return '';

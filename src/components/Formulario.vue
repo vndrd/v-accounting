@@ -1,9 +1,5 @@
 <template>
     <b-form>
-        <b-form-datepicker class="mb-3"
-            @change="cambiandoFecha"
-            v-model="form.fecha">
-        </b-form-datepicker>
         <b-form-group>
             <Select :form="form" />
         </b-form-group>
@@ -39,8 +35,7 @@ export default {
             form:{ 
                 cuenta: null,
                 monto: 0,
-                tipo: 'Tipo',
-                fecha: new Date()
+                tipo: 'Tipo'
             }
         }
     },
