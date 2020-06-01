@@ -50,7 +50,6 @@
   </b-tfoot>
 </b-table-simple>
     <b-form-datepicker class="mb-3 mt-5"
-        @change="cambiandoFecha"
         :disabled="getAsientos.length==0"
         v-model="formu.fecha">
     </b-form-datepicker>
@@ -78,7 +77,7 @@ export default {
         ...mapActions(['quitarAsiento']),
         valueOrBlankSpace(cuenta,tipo){
             if ( cuenta.tipo === tipo  ) 
-                return `${cuenta.monto}.-`
+                return `${parseInt(cuenta.monto).toFixed(2)}.-`
             return '';
 
         },
@@ -99,12 +98,12 @@ export default {
         sumarDebe(){
             let sumaD = 0;
             this.getAsientos.map(x => { if(x.tipo == 'Debe' ) {sumaD += parseInt(x.monto)}})
-            return sumaD
+            return parseInt(sumaD).toFixed(2)
         },
         sumarHaber(){
             let sumaD = 0;
             this.getAsientos.map(x => { if(x.tipo == 'Haber' ) {sumaD += parseInt(x.monto)}})
-            return sumaD
+            return parseInt(sumaD).toFixed(2)
         }
     },
     components: {
