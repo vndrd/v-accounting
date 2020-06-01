@@ -6,6 +6,7 @@
         
         <b-input-group size="md" prepend="$" append=".00 Bs.">
             <b-form-input
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
                 v-model="form.monto"
             ></b-form-input>
         </b-input-group>        
@@ -60,6 +61,10 @@ export default {
             console.log("enviarAsiento")
             if( this.form.cuenta===null ){
                 alert("escoger cuenta")
+                return
+            }
+            if( isNaN(this.form.monto) ){
+                alert("introducir un número válido")
                 return
             }
             if( this.form.monto <= 0 ){
