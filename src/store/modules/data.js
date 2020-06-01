@@ -23,7 +23,9 @@ const state = {
         {id: 21,text: 'IMPUESTO A LAS TRANSACCIONES', tipo: 'Egreso'},
         {id: 22, text: 'Capital Contable', tipo: 'Patrimonio'}
     ],
-    asientos: []
+    asientos: [
+        // {id: 1000,monto: 12,tipo: '',cuenta:{text:'qwe'}}
+    ]
 }
 const getters = {
     getCuentas: (state) => state.cuentas,
@@ -37,6 +39,7 @@ const actions = {
             id: form.cuenta.id,
             ...form
         }
+        console.log({asiento})
         commit('setAsiento',asiento)
     }
 }

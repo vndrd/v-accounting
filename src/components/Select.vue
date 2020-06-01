@@ -1,12 +1,11 @@
 <template>
-
-    <b-form-select
-        size="lg"
-        :options="cuentasSelect"
-        v-model="form.cuenta"
-        @change="cambiarSelect"
-        required
-    ></b-form-select>
+<b-form-select
+    size="lg"
+    :options="cuentasSelect"
+    v-model="form.cuenta"
+    @change="cambiarSelect"
+    required
+></b-form-select>
 
 </template>
 <script>
@@ -39,7 +38,7 @@ export default {
                 arr.push(grupo)
                 return arr
             },[] )
-            cuentas.push({value: null, text: 'Seleccionar Cuenta' })
+            cuentas.unshift({value: null, text: 'Seleccionar Cuenta' })
             return cuentas
         }
     },

@@ -8,7 +8,7 @@
             >
         </template>
         <template v-slot:cell(actions)="row">
-            <b-button size="sm" @click="quitar(row.item)" class="mr-1">
+            <b-button size="sm" @click="quitar(row.item)" class="mr-1" v-if="row.item.id!=1000">
                 <b-icon-trash-fill></b-icon-trash-fill>
             </b-button>
         </template>
@@ -21,9 +21,8 @@
         </template>
         <!-- A custom formatted footer cell for field 'name' -->
         <template v-slot:foot(cuenta)="">
-            <span class="text-secondary">Total</span>
+            <span class="text-secondary float-right">Total</span>
         </template>
-        
         <template v-slot:foot(debe)="">
             <span class="text-secondary mt-5">{{sumarDebe}}</span>
         </template>
@@ -51,8 +50,9 @@ export default {
     name: 'Tabla',
     data() {
         return {
+
             fields: [
-                {key: 'cuenta', label: 'Cuenta', formatter: value => {return value.text}},
+                {key: 'cuenta', label: 'Cuenta', formatter: cuenta => {return cuenta.text}},
                 {key: 'debe', label: 'Debe', formatter: (value,key,item) => {
                     if ( item.tipo == 'Debe'  ) {
                         return item.monto
@@ -72,7 +72,6 @@ export default {
         }
     },
     methods: {
-        ...mapGetters(['getAsientos']),
         quitar(item) {
             console.log("emit-ing from child");
             this.$emit('quitarCuenta',item)
@@ -81,16 +80,14 @@ export default {
     computed: {
         ...mapGetters(['getAsientos']) ,
         sumarDebe(){
-            // let sumaD = 0;
-            // this.lista.map(x => { if(x.tipo == 'Debe' ) {sumaD += parseInt(x.monto)}})
-            // return sumaD
-            return 0;
+            let sumaD = 0;
+            this.getAsientos.map(x => { if(x.tipo == 'Debe' ) {sumaD += parseInt(x.monto)}})
+            return sumaD
         },
         sumarHaber(){
-            // let sumaD = 0;
-            // this.lista.map(x => { if(x.tipo == 'Haber' ) {sumaD += parseInt(x.monto)}})
-            // return sumaD
-            return 0;
+            let sumaD = 0;
+            this.getAsientos.map(x => { if(x.tipo == 'Haber' ) {sumaD += parseInt(x.monto)}})
+            return sumaD
         }
     },
     components: {
