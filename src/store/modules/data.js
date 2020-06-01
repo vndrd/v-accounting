@@ -46,6 +46,7 @@ const actions = {
         console.log({text:'filtering',id})
         //logica
         commit('deleteAsiento',id)
+        commit('switchCuentaById',id)
     },
     switchCuenta: function({commit},id){
         commit('switchCuentaById',id)
