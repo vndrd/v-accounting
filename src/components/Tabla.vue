@@ -8,7 +8,7 @@
             >
         </template>
         <template v-slot:cell(actions)="row">
-            <b-button size="sm" @click="quitar(row.item)" class="mr-1" v-if="row.item.id!=1000">
+            <b-button size="sm" @click="quitarAsiento(row.item.id)" class="mr-1" v-if="row.item.id!=1000">
                 <b-icon-trash-fill></b-icon-trash-fill>
             </b-button>
         </template>
@@ -30,7 +30,7 @@
             <span class="text-secondary mt-5">{{sumarHaber}}</span>
         </template>
         <template v-slot:foot(actions)="">
-            <b-button v-if="sumarDebe==sumarHaber"
+            <b-button :disabled="sumarDebe!=sumarHaber"
                 size="md"
                 variant="success"
             >
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters,mapActions } from 'vuex'
 export default {
     name: 'Tabla',
     data() {
@@ -72,10 +72,7 @@ export default {
         }
     },
     methods: {
-        quitar(item) {
-            console.log("emit-ing from child");
-            this.$emit('quitarCuenta',item)
-        },
+        ...mapActions(['quitarAsiento'])
     },
     computed: {
         ...mapGetters(['getAsientos']) ,

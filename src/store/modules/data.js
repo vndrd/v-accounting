@@ -41,10 +41,18 @@ const actions = {
         }
         console.log({asiento})
         commit('setAsiento',asiento)
-    }
+    },
+    quitarAsiento: function({commit},id){
+        console.log({text:'filtering',id})
+        //logica
+        commit('deleteAsiento',id)
+    },
 }
 const mutations = {
-    setAsiento: (state,asiento) => state.asientos = [...state.asientos,asiento]
+    setAsiento: (state,asiento) => state.asientos = [...state.asientos,asiento],
+    deleteAsiento: (state,id) => 
+        state.asientos =
+        state.asientos.filter(asiento => asiento.cuenta.id!==id)
 }
 export default {
     state,
