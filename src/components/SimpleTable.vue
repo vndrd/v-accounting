@@ -37,7 +37,7 @@
         <b-td>{{getAsientos.length>0? `${sumarHaber}.-`: ''}}</b-td>
         <b-td>
             <b-button variant="success" 
-            :disabled="sumarHaber!==sumarDebe||getAsientos.length==0">
+                :disabled="sumarHaber!==sumarDebe||getAsientos.length==0">  
                 Registrar
             </b-button>
         </b-td>
@@ -75,7 +75,8 @@ export default {
             //         monto:this.form.monto
             //     }]
             // }
-            return this.getAsientos
+            let aux = this.getAsientos
+            return aux.sort( item => item.tipo==='Debe'? 0: 1)
         },
         sumarDebe(){
             let sumaD = 0;
