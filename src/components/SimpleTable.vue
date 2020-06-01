@@ -1,10 +1,10 @@
 <template>
 <b-table-simple responsive striped hover>
-  <b-thead>
+  <b-thead class="text-secondary">
     <b-tr>
       <b-th style="width: 15rem">CUENTA</b-th>
-      <b-th>DEBE</b-th>
-      <b-th>HABER</b-th>
+      <b-th style="width: 10rem">DEBE</b-th>
+      <b-th style="width: 10rem">HABER</b-th>
       <b-th style="width: 1rem"></b-th>
     </b-tr>
   </b-thead>
@@ -15,8 +15,16 @@
         </b-tr>
         <b-tr v-else v-for="cuenta in asientosMasTemporal" :key="cuenta.id">
             <b-td>{{cuenta.nombre}}</b-td>
-            <b-td>{{valueOrZero(cuenta,'Debe')}}</b-td>
-            <b-td>{{valueOrZero(cuenta,'Haber')}}</b-td>
+            <b-td>
+                
+                    {{valueOrZero(cuenta,'Debe')}}
+                
+            </b-td>
+            <b-td>
+                
+                    {{valueOrZero(cuenta,'Haber')}}
+                
+            </b-td>
             <b-td style="width: 1rem">
                     <b-button size="sm" 
                     class="mr-1" 
@@ -28,13 +36,17 @@
         </b-tr>
   </b-tbody>
     
-  <b-tfoot  class="mt-5">  
+  <b-tfoot  class="mt-5 bg-secondary text-light">  
     <b-tr>
         <b-td>
             <span class="float-right bold">{{getAsientos.length>0? 'Total: ': ''}}</span>
         </b-td>
-        <b-td>{{getAsientos.length>0? `${sumarDebe}.-`: ''}}</b-td>
-        <b-td>{{getAsientos.length>0? `${sumarHaber}.-`: ''}}</b-td>
+        <b-td>
+            {{getAsientos.length>0? `${sumarDebe}.-`: ''}}
+        </b-td>
+        <b-td>
+            {{getAsientos.length>0? `${sumarHaber}.-`: ''}}
+        </b-td>
         <b-td>
             <b-button variant="success" 
                 :disabled="sumarHaber!==sumarDebe||getAsientos.length==0">  
@@ -109,5 +121,9 @@ export default {
 }
 .test-enter-to{
     opacity: 1;
+}
+tbody td span {
+    padding: 10px;
+    background: yellow;
 }
 </style>

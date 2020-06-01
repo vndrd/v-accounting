@@ -1,8 +1,13 @@
 <template>
     <b-form>
+        <b-form-datepicker class="mb-3"
+            @change="cambiandoFecha"
+            v-model="form.fecha">
+        </b-form-datepicker>
         <b-form-group>
             <Select :form="form" />
         </b-form-group>
+        
         <b-input-group size="md" prepend="$" append=".00 Bs.">
             <b-form-input
                 v-model="form.monto"
@@ -35,6 +40,7 @@ export default {
                 cuenta: null,
                 monto: 0,
                 tipo: 'Tipo',
+                fecha: new Date()
             }
         }
     },
@@ -72,7 +78,10 @@ export default {
             this.agregarAsiento(this.form)
             this.switchCuenta(this.form.cuenta.id)
             this.form.cuenta=null
-        }
+        },
+        cambiandoFecha(){
+            console.log({fecha:this.form.fecha})
+        },
     },    
 }
 </script>
