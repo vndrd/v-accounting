@@ -1,7 +1,7 @@
 <template>
   <b-container fluid>
       <b-row>
-        <b-col md="4">
+        <b-col md="4" class="mb-3">
           <b-card
               header="Asientos"
               header-text-variant="white"
@@ -10,7 +10,7 @@
             <formulario/>    
           </b-card>
         </b-col>
-        <b-col md="7" class="tabla-container">
+        <b-col md="7" class="tabla-container mb-3">
           <b-card
               header="Tabla de Asientos"
               header-text-variant="white"

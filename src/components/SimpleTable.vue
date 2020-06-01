@@ -1,11 +1,11 @@
 <template>
 <div>
 <b-table-simple responsive hover>
-  <b-thead class="text-light bg-secondary">
+  <b-thead class="text-dark border-dark">
     <b-tr>
-      <b-th style="width: 20rem">CUENTA</b-th>
-      <b-th style="width: 10rem">DEBE</b-th>
-      <b-th style="width: 10rem">HABER</b-th>
+      <b-th style="width: 20rem" variant="dark">CUENTA</b-th>
+      <b-th style="width: 10rem" class="text-center" >DEBE</b-th>
+      <b-th style="width: 10rem" class="text-center" >HABER</b-th>
       <b-th style="width: 1rem"></b-th>
     </b-tr>
   </b-thead>
@@ -33,18 +33,18 @@
         </b-tr>
   </b-tbody>
     
-  <b-tfoot  class="mt-5 bg-secondary text-light">  
-    <b-tr>
-        <b-td>
+  <b-tfoot  class="mt-5 text-secondary">  
+    <b-tr >
+        <b-td >
             <span class="float-right bold">{{getAsientos.length>0? 'Total: ': ''}}</span>
         </b-td>
-        <b-td class="text-right">
+        <b-td  class="text-right" variant="danger">
             {{getAsientos.length>0? `${sumarColumna('Debe')}.-`: ''}}
         </b-td>
-        <b-td class="text-right">
+        <b-td  class="text-right" variant="success">
             {{getAsientos.length>0? `${sumarColumna('Haber')}.-`: ''}}
         </b-td>
-        <b-td>
+        <b-td >
         </b-td>
     </b-tr>
   </b-tfoot>
@@ -81,10 +81,12 @@ export default {
             return '';
 
         },
+        sumarDebe: () => this.sumarColumna('Debe'),
+        sumarHaber: () => this.sumarColumna('Haber'),
         sumarColumna(tipo){
             let sumaD = this.getAsientos
-                            .filter( item => item.tipo===tipo)
-                            .reduce( (sum,item) => sum + item.monto , 0)
+                    .filter( item => item.tipo===tipo)
+                    .reduce( (sum,item) => sum + item.monto , 0)
             return parseInt(sumaD).toFixed(2)
         }
     },
@@ -123,8 +125,7 @@ export default {
 .test-enter-to{
     opacity: 1;
 }
-tbody td span {
-    padding: 10px;
-    background: yellow;
+tbody td {
+    padding-left: 20px;
 }
 </style>
