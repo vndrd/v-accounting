@@ -17,6 +17,7 @@
               header-tag="header"
           header-bg-variant="dark">
             <b-card-body>
+              <!-- <SimpleTable :form="form" /> -->
               <SimpleTable />
             </b-card-body>
           </b-card>
