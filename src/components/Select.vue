@@ -28,7 +28,7 @@ export default {
                         ({
                             value: cuenta,
                             text:   cuenta.text,
-                            disabled:   false,
+                            disabled:   cuenta.disabled,
                         })
                     )
                 let grupo = {

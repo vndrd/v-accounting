@@ -92,7 +92,6 @@ export default {
     }
 }
 </script>
-
 <style lang="scss">
 .tablita-move{
     transition: transform 1s;

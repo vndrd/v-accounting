@@ -45,7 +45,10 @@ export default {
         ...mapGetters(['getCuentas']),
     },
     methods:{
-        ...mapActions(['agregarAsiento']),
+        ...mapActions([
+            'agregarAsiento',
+            'switchCuenta',
+        ]),
         agregarCuenta(){
             console.log("qwe")
         },
@@ -67,6 +70,8 @@ export default {
                 return
             }
             this.agregarAsiento(this.form)
+            this.switchCuenta(this.form.cuenta.id)
+            this.form.cuenta=null
         }
     },    
 }
