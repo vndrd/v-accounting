@@ -39,10 +39,10 @@
             <span class="float-right bold">{{getAsientos.length>0? 'Total: ': ''}}</span>
         </b-td>
         <b-td class="text-right">
-            {{getAsientos.length>0? `${sumarDebe}.-`: ''}}
+            {{getAsientos.length>0? `${sumarColumna('Debe')}.-`: ''}}
         </b-td>
         <b-td class="text-right">
-            {{getAsientos.length>0? `${sumarHaber}.-`: ''}}
+            {{getAsientos.length>0? `${sumarColumna('Haber')}.-`: ''}}
         </b-td>
         <b-td>
         </b-td>
@@ -81,6 +81,12 @@ export default {
             return '';
 
         },
+        sumarColumna(tipo){
+            let sumaD = this.getAsientos
+                            .filter( item => item.tipo===tipo)
+                            .reduce( (sum,item) => sum + item.monto , 0)
+            return parseInt(sumaD).toFixed(2)
+        }
     },
     computed: {
         ...mapGetters(['getAsientos']) ,
@@ -95,16 +101,6 @@ export default {
             let aux = this.getAsientos
             return aux.sort( item => item.tipo==='Debe'? 0: 1)
         },
-        sumarDebe(){
-            let sumaD = 0;
-            this.getAsientos.map(x => { if(x.tipo == 'Debe' ) {sumaD += parseInt(x.monto)}})
-            return parseInt(sumaD).toFixed(2)
-        },
-        sumarHaber(){
-            let sumaD = 0;
-            this.getAsientos.map(x => { if(x.tipo == 'Haber' ) {sumaD += parseInt(x.monto)}})
-            return parseInt(sumaD).toFixed(2)
-        }
     },
     components: {
 
