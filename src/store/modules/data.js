@@ -37,7 +37,8 @@ const actions = {
         let asiento = {
             nombre: form.cuenta.text,
             id: form.cuenta.id,
-            ...form
+            ...form,
+            edit: false,
         }
         console.log({asiento})
         commit('setAsiento',asiento)

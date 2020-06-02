@@ -8,19 +8,36 @@
       <b-th style="width: 10rem" class="text-center" >HABER</b-th>
       <b-th style="width: 1rem"></b-th>
     </b-tr>
-  </b-thead>
-    
+  </b-thead>    
   <b-tbody tag="transition-group" name="test">
         <b-tr v-if="getAsientos.length==0">
             <b-td colspan="4" class="text-center">Agregar cuentas a la lista</b-td>
         </b-tr>
         <b-tr v-else v-for="cuenta in asientosMasTemporal" :key="cuenta.id">
             <b-td>{{cuenta.nombre}}</b-td>
-            <b-td class="text-right">
-                {{valueOrBlankSpace(cuenta,'Debe')}}
+            <b-td class="text-right">               
+                <div v-if="cuenta.tipo=='Debe'">
+                    <div v-show = "cuenta.edit == false">
+                        <label @dblclick = "cuenta.edit = true"> {{valueOrBlankSpace(cuenta,'Debe')}} </label>
+                    </div>
+                    <input v-show = "cuenta.edit == true" 
+                        v-model = "cuenta.monto"
+                        v-on:blur= "cuenta.edit=false; $emit('update')"
+                        @keyup.enter = "cuenta.edit=false; $emit('update')"
+                    />
+                </div> 
             </b-td>
             <b-td class="text-right">
-                {{valueOrBlankSpace(cuenta,'Haber')}}
+                <div v-if="cuenta.tipo=='Haber'">
+                    <div v-show = "cuenta.edit == false">
+                        <label @dblclick = "cuenta.edit = true"> {{valueOrBlankSpace(cuenta,'Haber')}} </label>
+                    </div>
+                    <input v-show = "cuenta.edit == true" 
+                        v-model = "cuenta.monto"
+                        @blur= "cuenta.edit=false; $emit('update')"
+                        @keyup.enter = "cuenta.edit=false; $emit('update')"
+                    />
+                </div>
             </b-td>
             <b-td style="width: 1rem">
                     <b-button size="sm" 
@@ -127,5 +144,10 @@ export default {
 }
 tbody td {
     padding-left: 20px;
+}
+td input {
+    width: 80%  ;
+    text-align: right;
+    border: 1px solid #348;
 }
 </style>
