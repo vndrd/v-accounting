@@ -6,7 +6,7 @@
               header="Asientos"
               header-text-variant="white"
               header-tag="header"
-          header-bg-variant="secondary">
+              header-bg-variant="info">
             <formulario/>    
           </b-card>
         </b-col>
@@ -37,6 +37,9 @@ export default {
     return {
       activos: [],
     }
+  },
+  mounted(){
+    
   },
   methods:{
     quitarOption: function(id) {

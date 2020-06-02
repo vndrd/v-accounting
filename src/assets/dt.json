@@ -1,0 +1,962 @@
+{
+	"data" : 
+	{
+		"departamentos" : 
+		{
+			"1" : 
+			{
+				"confirmados" : 28,
+				"confirmadosHoy" : 2,
+				"dias" : 68,
+				"fallecidos" : 2,
+				"fallecidosHoy" : 0,
+				"puesto" : 8,
+				"recuperados" : 14,
+				"recuperadosHoy" : 0
+			},
+			"2" : 
+			{
+				"confirmados" : 555,
+				"confirmadosHoy" : 48,
+				"dias" : 76,
+				"fallecidos" : 31,
+				"fallecidosHoy" : 3,
+				"puesto" : 4,
+				"recuperados" : 248,
+				"recuperadosHoy" : 4
+			},
+			"3" : 
+			{
+				"confirmados" : 714,
+				"confirmadosHoy" : 103,
+				"dias" : 82,
+				"fallecidos" : 34,
+				"fallecidosHoy" : 11,
+				"puesto" : 3,
+				"recuperados" : 60,
+				"recuperadosHoy" : 0
+			},
+			"4" : 
+			{
+				"confirmados" : 210,
+				"confirmadosHoy" : 6,
+				"dias" : 85,
+				"fallecidos" : 14,
+				"fallecidosHoy" : 0,
+				"puesto" : 5,
+				"recuperados" : 73,
+				"recuperadosHoy" : 0
+			},
+			"5" : 
+			{
+				"confirmados" : 70,
+				"confirmadosHoy" : 2,
+				"dias" : 73,
+				"fallecidos" : 1,
+				"fallecidosHoy" : 0,
+				"puesto" : 6,
+				"recuperados" : 28,
+				"recuperadosHoy" : 0
+			},
+			"6" : 
+			{
+				"confirmados" : 37,
+				"confirmadosHoy" : 5,
+				"dias" : 65,
+				"fallecidos" : 4,
+				"fallecidosHoy" : 1,
+				"puesto" : 7,
+				"recuperados" : 7,
+				"recuperadosHoy" : 0
+			},
+			"7" : 
+			{
+				"confirmados" : 7018,
+				"confirmadosHoy" : 307,
+				"dias" : 85,
+				"fallecidos" : 164,
+				"fallecidosHoy" : 15,
+				"puesto" : 1,
+				"recuperados" : 688,
+				"recuperadosHoy" : 147
+			},
+			"8" : 
+			{
+				"confirmados" : 1885,
+				"confirmadosHoy" : 76,
+				"dias" : 46,
+				"fallecidos" : 92,
+				"fallecidosHoy" : 0,
+				"puesto" : 2,
+				"recuperados" : 8,
+				"recuperadosHoy" : 0
+			},
+			"9" : 
+			{
+				"confirmados" : 14,
+				"confirmadosHoy" : 0,
+				"dias" : 67,
+				"fallecidos" : 1,
+				"fallecidosHoy" : 0,
+				"puesto" : 9,
+				"recuperados" : 11,
+				"recuperadosHoy" : 0
+			}
+		},
+		"evolucion" : 
+		[
+			{
+				"confirmados" : 0,
+				"departamento" : 7,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-09",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 3,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-15",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 7,
+				"departamento" : 4,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-15",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 3,
+				"departamento" : 7,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-15",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 2,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-21",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 2,
+				"departamento" : 3,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-21",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 8,
+				"departamento" : 4,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-21",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 9,
+				"departamento" : 7,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-21",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 8,
+				"departamento" : 2,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-26",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 9,
+				"departamento" : 3,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-26",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 8,
+				"departamento" : 4,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-26",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 2,
+				"departamento" : 5,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-26",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 34,
+				"departamento" : 7,
+				"fallecidos" : 0,
+				"fecha" : "2020-03-26",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 1,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-01",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 16,
+				"departamento" : 2,
+				"fallecidos" : 3,
+				"fecha" : "2020-04-01",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 20,
+				"departamento" : 3,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-01",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 8,
+				"departamento" : 4,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-01",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 5,
+				"departamento" : 5,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-01",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 6,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-01",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 68,
+				"departamento" : 7,
+				"fallecidos" : 5,
+				"fecha" : "2020-04-01",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 4,
+				"departamento" : 9,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-01",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 1,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-06",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 37,
+				"departamento" : 2,
+				"fallecidos" : 6,
+				"fecha" : "2020-04-06",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 32,
+				"departamento" : 3,
+				"fallecidos" : 2,
+				"fecha" : "2020-04-06",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 8,
+				"departamento" : 4,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-06",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 9,
+				"departamento" : 5,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-06",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 6,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-06",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 100,
+				"departamento" : 7,
+				"fallecidos" : 5,
+				"fecha" : "2020-04-06",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 6,
+				"departamento" : 9,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-06",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 1,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-12",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 73,
+				"departamento" : 2,
+				"fallecidos" : 10,
+				"fecha" : "2020-04-12",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 52,
+				"departamento" : 3,
+				"fallecidos" : 4,
+				"fecha" : "2020-04-12",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 13,
+				"departamento" : 4,
+				"fallecidos" : 2,
+				"fecha" : "2020-04-12",
+				"recuperados" : 1
+			},
+			{
+				"confirmados" : 15,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-04-12",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 2,
+				"departamento" : 6,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-12",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 163,
+				"departamento" : 7,
+				"fallecidos" : 10,
+				"fecha" : "2020-04-12",
+				"recuperados" : 1
+			},
+			{
+				"confirmados" : 11,
+				"departamento" : 9,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-12",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 1,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-18",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 120,
+				"departamento" : 2,
+				"fallecidos" : 12,
+				"fecha" : "2020-04-18",
+				"recuperados" : 6
+			},
+			{
+				"confirmados" : 60,
+				"departamento" : 3,
+				"fallecidos" : 4,
+				"fecha" : "2020-04-18",
+				"recuperados" : 7
+			},
+			{
+				"confirmados" : 42,
+				"departamento" : 4,
+				"fallecidos" : 2,
+				"fecha" : "2020-04-18",
+				"recuperados" : 8
+			},
+			{
+				"confirmados" : 18,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-04-18",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 3,
+				"departamento" : 6,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-18",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 237,
+				"departamento" : 7,
+				"fallecidos" : 12,
+				"fecha" : "2020-04-18",
+				"recuperados" : 10
+			},
+			{
+				"confirmados" : 0,
+				"departamento" : 8,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-18",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 12,
+				"departamento" : 9,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-18",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 1,
+				"departamento" : 1,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-23",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 140,
+				"departamento" : 2,
+				"fallecidos" : 13,
+				"fecha" : "2020-04-23",
+				"recuperados" : 9
+			},
+			{
+				"confirmados" : 63,
+				"departamento" : 3,
+				"fallecidos" : 6,
+				"fecha" : "2020-04-23",
+				"recuperados" : 13
+			},
+			{
+				"confirmados" : 59,
+				"departamento" : 4,
+				"fallecidos" : 2,
+				"fecha" : "2020-04-23",
+				"recuperados" : 8
+			},
+			{
+				"confirmados" : 21,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-04-23",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 3,
+				"departamento" : 6,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-23",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 371,
+				"departamento" : 7,
+				"fallecidos" : 16,
+				"fecha" : "2020-04-23",
+				"recuperados" : 14
+			},
+			{
+				"confirmados" : 2,
+				"departamento" : 8,
+				"fallecidos" : 1,
+				"fecha" : "2020-04-23",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 12,
+				"departamento" : 9,
+				"fallecidos" : 1,
+				"fecha" : "2020-04-23",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 3,
+				"departamento" : 1,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-29",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 188,
+				"departamento" : 2,
+				"fallecidos" : 15,
+				"fecha" : "2020-04-29",
+				"recuperados" : 26
+			},
+			{
+				"confirmados" : 79,
+				"departamento" : 3,
+				"fallecidos" : 6,
+				"fecha" : "2020-04-29",
+				"recuperados" : 22
+			},
+			{
+				"confirmados" : 92,
+				"departamento" : 4,
+				"fallecidos" : 4,
+				"fecha" : "2020-04-29",
+				"recuperados" : 10
+			},
+			{
+				"confirmados" : 26,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-04-29",
+				"recuperados" : 2
+			},
+			{
+				"confirmados" : 3,
+				"departamento" : 6,
+				"fallecidos" : 0,
+				"fecha" : "2020-04-29",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 587,
+				"departamento" : 7,
+				"fallecidos" : 27,
+				"fecha" : "2020-04-29",
+				"recuperados" : 44
+			},
+			{
+				"confirmados" : 63,
+				"departamento" : 8,
+				"fallecidos" : 1,
+				"fecha" : "2020-04-29",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 12,
+				"departamento" : 9,
+				"fallecidos" : 1,
+				"fecha" : "2020-04-29",
+				"recuperados" : 6
+			},
+			{
+				"confirmados" : 5,
+				"departamento" : 1,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-04",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 243,
+				"departamento" : 2,
+				"fallecidos" : 15,
+				"fecha" : "2020-05-04",
+				"recuperados" : 45
+			},
+			{
+				"confirmados" : 82,
+				"departamento" : 3,
+				"fallecidos" : 6,
+				"fecha" : "2020-05-04",
+				"recuperados" : 25
+			},
+			{
+				"confirmados" : 111,
+				"departamento" : 4,
+				"fallecidos" : 7,
+				"fecha" : "2020-05-04",
+				"recuperados" : 28
+			},
+			{
+				"confirmados" : 33,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-04",
+				"recuperados" : 2
+			},
+			{
+				"confirmados" : 4,
+				"departamento" : 6,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-04",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 979,
+				"departamento" : 7,
+				"fallecidos" : 44,
+				"fecha" : "2020-05-04",
+				"recuperados" : 68
+			},
+			{
+				"confirmados" : 212,
+				"departamento" : 8,
+				"fallecidos" : 6,
+				"fecha" : "2020-05-04",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 12,
+				"departamento" : 9,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-04",
+				"recuperados" : 6
+			},
+			{
+				"confirmados" : 14,
+				"departamento" : 1,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-10",
+				"recuperados" : 0
+			},
+			{
+				"confirmados" : 301,
+				"departamento" : 2,
+				"fallecidos" : 16,
+				"fecha" : "2020-05-10",
+				"recuperados" : 63
+			},
+			{
+				"confirmados" : 95,
+				"departamento" : 3,
+				"fallecidos" : 6,
+				"fecha" : "2020-05-10",
+				"recuperados" : 40
+			},
+			{
+				"confirmados" : 121,
+				"departamento" : 4,
+				"fallecidos" : 9,
+				"fecha" : "2020-05-10",
+				"recuperados" : 52
+			},
+			{
+				"confirmados" : 35,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-10",
+				"recuperados" : 6
+			},
+			{
+				"confirmados" : 10,
+				"departamento" : 6,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-10",
+				"recuperados" : 2
+			},
+			{
+				"confirmados" : 1537,
+				"departamento" : 7,
+				"fallecidos" : 56,
+				"fecha" : "2020-05-10",
+				"recuperados" : 87
+			},
+			{
+				"confirmados" : 312,
+				"departamento" : 8,
+				"fallecidos" : 23,
+				"fecha" : "2020-05-10",
+				"recuperados" : 1
+			},
+			{
+				"confirmados" : 12,
+				"departamento" : 9,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-10",
+				"recuperados" : 7
+			},
+			{
+				"confirmados" : 15,
+				"departamento" : 1,
+				"fallecidos" : 2,
+				"fecha" : "2020-05-16",
+				"recuperados" : 1
+			},
+			{
+				"confirmados" : 328,
+				"departamento" : 2,
+				"fallecidos" : 19,
+				"fecha" : "2020-05-16",
+				"recuperados" : 123
+			},
+			{
+				"confirmados" : 196,
+				"departamento" : 3,
+				"fallecidos" : 9,
+				"fecha" : "2020-05-16",
+				"recuperados" : 50
+			},
+			{
+				"confirmados" : 132,
+				"departamento" : 4,
+				"fallecidos" : 9,
+				"fecha" : "2020-05-16",
+				"recuperados" : 65
+			},
+			{
+				"confirmados" : 36,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-16",
+				"recuperados" : 7
+			},
+			{
+				"confirmados" : 13,
+				"departamento" : 6,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-16",
+				"recuperados" : 2
+			},
+			{
+				"confirmados" : 2297,
+				"departamento" : 7,
+				"fallecidos" : 83,
+				"fecha" : "2020-05-16",
+				"recuperados" : 175
+			},
+			{
+				"confirmados" : 548,
+				"departamento" : 8,
+				"fallecidos" : 39,
+				"fecha" : "2020-05-16",
+				"recuperados" : 4
+			},
+			{
+				"confirmados" : 12,
+				"departamento" : 9,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-16",
+				"recuperados" : 7
+			},
+			{
+				"confirmados" : 19,
+				"departamento" : 1,
+				"fallecidos" : 2,
+				"fecha" : "2020-05-21",
+				"recuperados" : 4
+			},
+			{
+				"confirmados" : 363,
+				"departamento" : 2,
+				"fallecidos" : 21,
+				"fecha" : "2020-05-21",
+				"recuperados" : 180
+			},
+			{
+				"confirmados" : 259,
+				"departamento" : 3,
+				"fallecidos" : 11,
+				"fecha" : "2020-05-21",
+				"recuperados" : 55
+			},
+			{
+				"confirmados" : 138,
+				"departamento" : 4,
+				"fallecidos" : 10,
+				"fecha" : "2020-05-21",
+				"recuperados" : 70
+			},
+			{
+				"confirmados" : 40,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-21",
+				"recuperados" : 11
+			},
+			{
+				"confirmados" : 14,
+				"departamento" : 6,
+				"fallecidos" : 2,
+				"fecha" : "2020-05-21",
+				"recuperados" : 3
+			},
+			{
+				"confirmados" : 3241,
+				"departamento" : 7,
+				"fallecidos" : 97,
+				"fecha" : "2020-05-21",
+				"recuperados" : 219
+			},
+			{
+				"confirmados" : 833,
+				"departamento" : 8,
+				"fallecidos" : 54,
+				"fecha" : "2020-05-21",
+				"recuperados" : 4
+			},
+			{
+				"confirmados" : 12,
+				"departamento" : 9,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-21",
+				"recuperados" : 7
+			},
+			{
+				"confirmados" : 22,
+				"departamento" : 1,
+				"fallecidos" : 2,
+				"fecha" : "2020-05-27",
+				"recuperados" : 11
+			},
+			{
+				"confirmados" : 410,
+				"departamento" : 2,
+				"fallecidos" : 24,
+				"fecha" : "2020-05-27",
+				"recuperados" : 219
+			},
+			{
+				"confirmados" : 345,
+				"departamento" : 3,
+				"fallecidos" : 18,
+				"fecha" : "2020-05-27",
+				"recuperados" : 60
+			},
+			{
+				"confirmados" : 153,
+				"departamento" : 4,
+				"fallecidos" : 13,
+				"fecha" : "2020-05-27",
+				"recuperados" : 72
+			},
+			{
+				"confirmados" : 44,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-27",
+				"recuperados" : 20
+			},
+			{
+				"confirmados" : 19,
+				"departamento" : 6,
+				"fallecidos" : 3,
+				"fecha" : "2020-05-27",
+				"recuperados" : 7
+			},
+			{
+				"confirmados" : 4888,
+				"departamento" : 7,
+				"fallecidos" : 135,
+				"fecha" : "2020-05-27",
+				"recuperados" : 273
+			},
+			{
+				"confirmados" : 1242,
+				"departamento" : 8,
+				"fallecidos" : 77,
+				"fecha" : "2020-05-27",
+				"recuperados" : 8
+			},
+			{
+				"confirmados" : 13,
+				"departamento" : 9,
+				"fallecidos" : 1,
+				"fecha" : "2020-05-27",
+				"recuperados" : 7
+			},
+			{
+				"confirmados" : 28,
+				"departamento" : 1,
+				"fallecidos" : 2,
+				"fecha" : "2020-06-01",
+				"recuperados" : 14
+			},
+			{
+				"confirmados" : 555,
+				"departamento" : 2,
+				"fallecidos" : 31,
+				"fecha" : "2020-06-01",
+				"recuperados" : 248
+			},
+			{
+				"confirmados" : 714,
+				"departamento" : 3,
+				"fallecidos" : 34,
+				"fecha" : "2020-06-01",
+				"recuperados" : 60
+			},
+			{
+				"confirmados" : 210,
+				"departamento" : 4,
+				"fallecidos" : 14,
+				"fecha" : "2020-06-01",
+				"recuperados" : 73
+			},
+			{
+				"confirmados" : 70,
+				"departamento" : 5,
+				"fallecidos" : 1,
+				"fecha" : "2020-06-01",
+				"recuperados" : 28
+			},
+			{
+				"confirmados" : 37,
+				"departamento" : 6,
+				"fallecidos" : 4,
+				"fecha" : "2020-06-01",
+				"recuperados" : 7
+			},
+			{
+				"confirmados" : 7018,
+				"departamento" : 7,
+				"fallecidos" : 164,
+				"fecha" : "2020-06-01",
+				"recuperados" : 688
+			},
+			{
+				"confirmados" : 1885,
+				"departamento" : 8,
+				"fallecidos" : 92,
+				"fecha" : "2020-06-01",
+				"recuperados" : 8
+			},
+			{
+				"confirmados" : 14,
+				"departamento" : 9,
+				"fallecidos" : 1,
+				"fecha" : "2020-06-01",
+				"recuperados" : 11
+			}
+		],
+		"fechaMax" : "2020-06-01T21:50:00",
+		"fechaMin" : "2020-03-10T00:00:00",
+		"maxDepto" : 7018,
+		"pais" : 
+		{
+			"Confirmados" : 10531,
+			"Deptos." : 9,
+			"Días" : 83,
+			"Fallecidos" : 343,
+			"Recuperados" : 1137,
+			"Últ. 24h" : 549
+		},
+		"puestos" : 
+		[
+			7,
+			8,
+			3,
+			2,
+			4,
+			5,
+			6,
+			1,
+			9
+		],
+		"ultimaActualizacion" : "Actualizado: Lun Junio 01 2020, 21:06 ayer"
+	},
+	"estado" : "ok"
+}

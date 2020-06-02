@@ -28,6 +28,7 @@
 </template>
 <script>
 import { mapGetters,mapActions } from 'vuex'
+import Swal from 'sweetalert2'
 import Select from '@/components/Select'
 export default {
     name: 'Formulario',
@@ -60,19 +61,19 @@ export default {
         enviarAsiento(){
             console.log("enviarAsiento")
             if( this.form.cuenta===null ){
-                alert("escoger cuenta")
+                Swal.fire('Oops...', 'Debes escoger una cuenta', 'error')
                 return
             }
             if( isNaN(this.form.monto) ){
-                alert("introducir un número válido")
+                Swal.fire('Oops...', 'Debes introducir un número válido', 'error')
                 return
             }
             if( this.form.monto <= 0 ){
-                alert("asignar monto")
+                Swal.fire('Oops...', 'Debes asignar monto', 'error')
                 return
             }
             if( this.form.tipo === 'Tipo' ){
-                alert("escoger tipo")
+                Swal.fire('Oops...', 'Debes escoger tipo', 'error')
                 return
             }
             this.agregarAsiento(this.form)
