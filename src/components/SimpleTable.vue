@@ -21,22 +21,27 @@
                         <label @dblclick = "cuenta.edit = true"> {{valueOrBlankSpace(cuenta,'Debe')}} </label>
                     </div>
                     <input v-show = "cuenta.edit == true" 
-                        v-model = "cuenta.monto"
-                        v-on:blur= "cuenta.edit=false; $emit('update')"
-                        @keyup.enter = "cuenta.edit=false; $emit('update')"
+                        onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+                        v-model="cuenta.monto"
+                        v-on:blur="cuenta.edit=false;$emit('update')"
+                        @focusout="cuenta.edit=false;$emit('update')"
+                        @keyup.enter="cuenta.edit=false; $emit('update')"
                     />
                 </div> 
             </b-td>
             <b-td class="text-right">
                 <div v-if="cuenta.tipo=='Haber'">
-                    <div v-show = "cuenta.edit == false">
+                    <div v-show="cuenta.edit == false">
                         <label @dblclick = "cuenta.edit = true"> {{valueOrBlankSpace(cuenta,'Haber')}} </label>
                     </div>
-                    <input v-show = "cuenta.edit == true" 
-                        v-model = "cuenta.monto"
-                        @blur= "cuenta.edit=false; $emit('update')"
-                        @keyup.enter = "cuenta.edit=false; $emit('update')"
-                    />
+                    <input v-show="cuenta.edit == true" 
+                        onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+                        v-model="cuenta.monto"
+                        name="wqe+'cuenta.id'"
+                        v-on:blur="cuenta.edit=false;$emit('update')"
+                        @focusout="cuenta.edit=false;$emit('update')"
+                        @keyup.enter="cuenta.edit=false; $emit('update')"
+                    >
                 </div>
             </b-td>
             <b-td style="width: 1rem">
@@ -91,19 +96,21 @@ export default {
         }
     },
     methods: {
+        handlingBlur(){
+            console.log({text: '  handling bkyr '})
+        },
         ...mapActions(['quitarAsiento']),
         valueOrBlankSpace(cuenta,tipo){
             if ( cuenta.tipo === tipo  ) 
                 return `${parseInt(cuenta.monto).toFixed(2)}.-`
             return '';
-
         },
         sumarDebe: () => this.sumarColumna('Debe'),
         sumarHaber: () => this.sumarColumna('Haber'),
         sumarColumna(tipo){
             let sumaD = this.getAsientos
                     .filter( item => item.tipo===tipo)
-                    .reduce( (sum,item) => sum + item.monto , 0)
+                    .reduce( (sum,item) => sum + parseInt(item.monto) , 0)  
             return parseInt(sumaD).toFixed(2)
         }
     },
